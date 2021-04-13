@@ -10,6 +10,7 @@ use yii\base\Component;
  * Class Client
  * @property Oss $oss
  * @property Sts $sts
+ * @property Ram $ram
  * @package larkit\oss
  */
 class Client extends Component
@@ -33,6 +34,11 @@ class Client extends Component
     public function getSts()
     {
         return new Sts($this);
+    }
+
+    public function getRam()
+    {
+        return new Ram($this);
     }
 
 }
